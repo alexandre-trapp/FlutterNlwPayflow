@@ -63,6 +63,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 onPressed: () {
                   homeController.setPage(0);
+                  setState(() {});
                 },
                 icon: Icon(
                   Icons.home,
@@ -87,6 +88,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 onPressed: () {
                   homeController.setPage(1);
+                  setState(() {});
                 },
                 icon: Icon(
                   Icons.description_outlined,
