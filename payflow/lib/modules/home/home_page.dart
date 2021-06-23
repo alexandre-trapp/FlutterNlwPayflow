@@ -42,12 +42,36 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-          height: 90,
-          child: Row(children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.description_outlined))
-          ])),
+        height: 90,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home,
+                  color: AppColors.primary,
+                )),
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(10)),
+              child: Icon(
+                Icons.add_box_outlined,
+                color: AppColors.background,
+              ),
+            ),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.description_outlined,
+                  color: AppColors.body,
+                ))
+          ],
+        ),
+      ),
     );
   }
 }
