@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
+
+import 'modules/home/home_page.dart';
 import 'modules/login/login_page.dart';
+import 'modules/splash/splash_page.dart';
 
 class AppWidget extends StatelessWidget {
   // This widget is the root of your application.
@@ -12,6 +15,11 @@ class AppWidget extends StatelessWidget {
         primaryColor: AppColors.primary,
       ),
       home: LoginPage(),
+      routes: {
+        "/splash": (context) => SplashPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
 }
