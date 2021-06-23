@@ -52,15 +52,20 @@ class HomePage extends StatelessWidget {
                   Icons.home,
                   color: AppColors.primary,
                 )),
-            Container(
-              width: 56,
-              height: 56,
-              decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Icon(
-                Icons.add_box_outlined,
-                color: AppColors.background,
+            GestureDetector(
+              onTap: () {
+                print("clicou");
+              },
+              child: Container(
+                width: 56,
+                height: 56,
+                decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Icon(
+                  Icons.add_box_outlined,
+                  color: AppColors.background,
+                ),
               ),
             ),
             IconButton(
