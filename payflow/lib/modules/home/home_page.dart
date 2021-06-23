@@ -41,6 +41,13 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+          height: 90,
+          child: Row(children: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.description_outlined))
+          ])),
     );
   }
 }
