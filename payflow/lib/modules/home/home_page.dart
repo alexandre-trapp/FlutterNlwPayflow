@@ -15,9 +15,15 @@ class HomePage extends StatelessWidget {
           color: AppColors.primary,
           child: Center(
             child: ListTile(
-              title: Text(
-                "Olá Alexandre",
-                style: TextStyles.titleRegular,
+              title: Text.rich(
+                TextSpan(
+                    text: "Olá, ",
+                    style: TextStyles.titleRegular,
+                    children: [
+                      TextSpan(
+                          text: "Alexandre",
+                          style: TextStyles.titleBoldBackground)
+                    ]),
               ),
               subtitle: Text(
                 "Mantenha suas contas em dia",
