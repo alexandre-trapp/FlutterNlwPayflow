@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary,
       ),
-      home: LoginPage(),
+      initialRoute: "/splash",
       routes: {
         "/splash": (context) => SplashPage(),
         "/home": (context) => HomePage(),
