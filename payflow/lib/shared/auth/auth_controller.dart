@@ -28,9 +28,14 @@ class AuthController {
 
   Future<void> currentUser(BuildContext context) async {
     final instance = await SharedPreferences.getInstance();
-    final userJson = instance.get("user") as String;
 
-    setUser(context, UserModel.fromJson(userJson));
-    return;
+    if (instance.containsKey("user")) {
+      final userJson = instance.get("user") as String;
+
+      setUser(context, UserModel.fromJson(userJson));
+      return;
+    } else {
+      setUser(context, null);
+    }
   }
 }
