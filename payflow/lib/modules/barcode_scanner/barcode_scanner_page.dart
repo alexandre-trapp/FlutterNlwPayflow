@@ -14,24 +14,39 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text(
-            "Escaneie o código de barras do boleto",
-            style: TextStyles.buttonBackground,
-          ),
-          leading: BackButton(
-            color: AppColors.background,
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text(
+          "Escaneie o código de barras do boleto",
+          style: TextStyles.buttonBackground,
         ),
-        body: Column(
-          children: [
-            Expanded(child: Container(color: Colors.black)),
-            Expanded(child: Container(color: Colors.transparent)),
-            Expanded(child: Container(color: Colors.black)),
-          ],
+        leading: BackButton(
+          color: AppColors.background,
         ),
-        bottomNavigationBar:
-            LabelButton(label: "Inserir código do boleto", onPressed: () {}));
+      ),
+      body: Column(
+        children: [
+          Expanded(child: Container(color: Colors.black)),
+          Expanded(child: Container(color: Colors.transparent)),
+          Expanded(child: Container(color: Colors.black)),
+        ],
+      ),
+      bottomNavigationBar: Row(
+        children: [
+          Expanded(
+            child: LabelButton(
+              label: "Inserir código do boleto",
+              onPressed: () {},
+            ),
+          ),
+          Expanded(
+            child: LabelButton(
+              label: "Adicionar da galeria",
+              onPressed: () {},
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
