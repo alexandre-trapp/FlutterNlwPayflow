@@ -53,12 +53,17 @@ class BottomSheetWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
+                Container(
+                  height: 1,
+                  color: AppColors.stroke,
+                ),
                 SetLabelButtons(
                   primaryLabel: primaryLabel,
                   primaryOnPressed: primaryOnPressed,
                   secondaryLabel: secondaryLabel,
                   secondaryOnPressed: secondaryOnPressed,
-                )
+                ),
+                SizedBox(height: 2),
               ],
             ),
           ],
