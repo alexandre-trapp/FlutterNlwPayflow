@@ -36,8 +36,16 @@ class BottomSheetWidget extends StatelessWidget {
             ),
             Column(
               children: [
-                Text(title),
-                Text(subtitle),
+                Padding(
+                  padding: const EdgeInsets.all(40),
+                  child: Text.rich(
+                    TextSpan(
+                      text: title,
+                      children: [TextSpan(text: "\n$subtitle")],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 SetLabelButtons(
                   primaryLabel: primaryLabel,
                   primaryOnPressed: primaryOnPressed,
