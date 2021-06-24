@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
@@ -23,19 +24,21 @@ class BottomSheetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: AppColors.shape,
-      child: Column(
-        children: [
-          Text(title),
-          Text(subtitle),
-          SetLabelButtons(
-            primaryLabel: primaryLabel,
-            primaryOnPressed: primaryOnPressed,
-            secondaryLabel: secondaryLabel,
-            secondaryOnPressed: secondaryOnPressed,
-          )
-        ],
+    return Material(
+      child: Container(
+        color: AppColors.shape,
+        child: Column(
+          children: [
+            Text(title),
+            Text(subtitle),
+            SetLabelButtons(
+              primaryLabel: primaryLabel,
+              primaryOnPressed: primaryOnPressed,
+              secondaryLabel: secondaryLabel,
+              secondaryOnPressed: secondaryOnPressed,
+            )
+          ],
+        ),
       ),
     );
   }
