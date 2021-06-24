@@ -29,14 +29,23 @@ class BottomSheetWidget extends StatelessWidget {
         color: AppColors.shape,
         child: Column(
           children: [
-            Text(title),
-            Text(subtitle),
-            SetLabelButtons(
-              primaryLabel: primaryLabel,
-              primaryOnPressed: primaryOnPressed,
-              secondaryLabel: secondaryLabel,
-              secondaryOnPressed: secondaryOnPressed,
-            )
+            Expanded(
+              child: Container(
+                color: Colors.black.withOpacity(0.6),
+              ),
+            ),
+            Column(
+              children: [
+                Text(title),
+                Text(subtitle),
+                SetLabelButtons(
+                  primaryLabel: primaryLabel,
+                  primaryOnPressed: primaryOnPressed,
+                  secondaryLabel: secondaryLabel,
+                  secondaryOnPressed: secondaryOnPressed,
+                )
+              ],
+            ),
           ],
         ),
       ),
