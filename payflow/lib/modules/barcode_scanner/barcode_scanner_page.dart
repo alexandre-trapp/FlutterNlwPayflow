@@ -36,9 +36,19 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
           ),
           body: Column(
             children: [
-              Expanded(child: Container(color: Colors.black)),
-              Expanded(child: Container(color: Colors.transparent)),
-              Expanded(child: Container(color: Colors.black)),
+              Expanded(
+                child: Container(
+                  color: Colors.black.withOpacity(0.6),
+                ),
+              ),
+              Expanded(
+                child: Container(color: Colors.transparent),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.black.withOpacity(0.6),
+                ),
+              ),
             ],
           ),
           bottomNavigationBar: SetLabelButtons(
