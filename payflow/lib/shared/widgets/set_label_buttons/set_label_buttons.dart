@@ -29,7 +29,7 @@ class SetLabelButtons extends StatelessWidget {
             child: LabelButton(
               label: primaryLabel,
               onPressed: primaryOnPressed,
-              style: enablePrimaryColor ? TextStyles.buttonBoldPrimary : null,
+              style: enablePrimaryColor ? TextStyles.buttonPrimary : null,
             ),
           ),
           DividerVerticalWidget(),
