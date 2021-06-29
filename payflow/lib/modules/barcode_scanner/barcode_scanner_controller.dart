@@ -2,6 +2,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
+import 'package:image_picker/image_picker.dart';
 
 import 'barcode_scanner_status.dart';
 
@@ -26,6 +27,14 @@ class BarcodeScannerController {
     } catch (e) {
       status = BarcodeScannerStatus.error(e.toString());
     }
+  }
+
+  void scanWithImagePicker() async {
+    await status.cameraController!.stopImageStream();
+    final response = await ImagePicker().getImage(source: ImageSource.gallery);
+
+    final inputImage = InputImage.fromFilePath(response!.path);
+    scannerBarCode(inputImage);
   }
 
   Future<void> scannerBarCode(InputImage inputImage) async {
