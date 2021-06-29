@@ -60,7 +60,10 @@ class BarcodeScannerController {
 
       if (barcode != null && status.barcode.isEmpty) {
         status = BarcodeScannerStatus.barcode(barcode);
-        status.cameraController!.dispose();
+
+        if (status.cameraController != null) {
+          status.cameraController!.dispose();
+        }
       } else {
         getAvailableCameras();
       }
