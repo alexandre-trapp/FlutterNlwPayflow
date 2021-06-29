@@ -29,6 +29,7 @@ class BarcodeScannerController {
       );
 
       status = BarcodeScannerStatus.available(cameraController);
+      scanWithCamera();
     } catch (e) {
       status = BarcodeScannerStatus.error(e.toString());
     }
@@ -130,5 +131,13 @@ class BarcodeScannerController {
           }
         },
       );
+  }
+
+  void dispose() {
+    statusNotifier.dispose();
+    barcodeScanner.close();
+    if (status.showCamera) {
+      status.cameraController!.dispose();
+    }
   }
 }
