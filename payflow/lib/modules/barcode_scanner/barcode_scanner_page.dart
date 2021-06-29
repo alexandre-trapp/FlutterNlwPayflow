@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:payflow/modules/barcode_scanner/barcode_scanner_status.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:payflow/shared/widgets/bottom_sheet/bottom_sheet_widget.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 import 'barcode_scanner_controller.dart';
@@ -31,15 +32,6 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
 
   @override
   Widget build(BuildContext context) {
-    // return BottomSheetWidget(
-    //   title: "Não foi possível identificar um código de barras.",
-    //   subtitle: "Tente escanear novamente ou digite o código do seu boleto.",
-    //   primaryLabel: "Escanear novamente",
-    //   primaryOnPressed: () {},
-    //   secondaryLabel: "Digitar código",
-    //   secondaryOnPressed: () {},
-    // );
-
     return SafeArea(
       top: true,
       bottom: true,
@@ -98,6 +90,26 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                 secondaryOnPressed: () {},
               ),
             ),
+          ),
+          ValueListenableBuilder<BarcodeScannerStatus>(
+            valueListenable: controller.statusNotifier,
+            builder: (_, status, __) {
+              if (status.hasError) {
+                return BottomSheetWidget(
+                  title: "Não foi possível identificar um código de barras.",
+                  subtitle:
+                      "tente escanear novamente ou digite o código do seu boleto.",
+                  primaryLabel: "Escanear novamente",
+                  primaryOnPressed: () {
+                    controller.getAvailableCameras();
+                  },
+                  secondaryLabel: "Digitar código",
+                  secondaryOnPressed: () {},
+                );
+              } else {
+                return Container();
+              }
+            },
           ),
         ],
       ),
