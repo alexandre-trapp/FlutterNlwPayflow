@@ -15,7 +15,6 @@ class BarcodeScannerController {
 
   final barcodeScanner = GoogleMlKit.vision.barcodeScanner();
 
-  InputImage? imagePicker;
   CameraController? cameraController;
 
   void getAvailableCameras() async {
