@@ -106,7 +106,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                       "tente escanear novamente ou digite o código do seu boleto.",
                   primaryLabel: "Escanear novamente",
                   primaryOnPressed: () {
-                    controller.getAvailableCameras();
+                    controller.scanWithCamera();
                   },
                   secondaryLabel: "Digitar código",
                   secondaryOnPressed: () {},
