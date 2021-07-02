@@ -9,7 +9,15 @@ class InputTextWidget extends StatelessWidget {
     return Column(
       children: [
         TextFormField(
-          decoration: InputDecoration(border: InputBorder.none),
+          decoration: InputDecoration(
+            icon: Row(
+              children: [
+                Icon(Icons.ac_unit),
+                Container(width: 1, height: 48, color: AppColors.stroke),
+              ],
+            ),
+            border: InputBorder.none,
+          ),
         ),
         Divider(
           height: 1,
