@@ -20,7 +20,7 @@ class InsertBoletoPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 93, vertical: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 83, vertical: 24),
             child: Text(
               "Preencha os dados do boleto",
               style: TextStyles.titleBoldHeading,
