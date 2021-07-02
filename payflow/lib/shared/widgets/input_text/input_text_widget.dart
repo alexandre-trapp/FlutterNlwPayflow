@@ -12,7 +12,10 @@ class InputTextWidget extends StatelessWidget {
           decoration: InputDecoration(
             icon: Row(
               children: [
-                Icon(Icons.ac_unit),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
+                  child: Icon(Icons.ac_unit),
+                ),
                 Container(width: 1, height: 48, color: AppColors.stroke),
               ],
             ),
