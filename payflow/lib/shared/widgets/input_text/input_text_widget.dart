@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
+import 'package:payflow/shared/themes/app_text_styles.dart';
 
 class InputTextWidget extends StatelessWidget {
   const InputTextWidget({Key? key}) : super(key: key);
@@ -9,12 +10,20 @@ class InputTextWidget extends StatelessWidget {
     return Column(
       children: [
         TextFormField(
+          style: TextStyles.input,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.zero,
+            labelText: "Nome do boleto",
+            labelStyle: TextStyles.input,
             icon: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18),
-                  child: Icon(Icons.ac_unit),
+                  child: Icon(
+                    Icons.ac_unit,
+                    color: AppColors.primary,
+                  ),
                 ),
                 Container(width: 1, height: 48, color: AppColors.stroke),
               ],

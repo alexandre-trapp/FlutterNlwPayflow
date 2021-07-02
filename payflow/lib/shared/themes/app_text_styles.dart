@@ -20,6 +20,11 @@ class TextStyles {
   );
   static final titleBoldBackground = GoogleFonts.lexendDeca(
     fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: AppColors.input,
+  );
+  static final input = GoogleFonts.lexendDeca(
+    fontSize: 20,
     fontWeight: FontWeight.w600,
     color: AppColors.background,
   );
