@@ -20,13 +20,13 @@ class TextStyles {
   );
   static final titleBoldBackground = GoogleFonts.lexendDeca(
     fontSize: 20,
-    fontWeight: FontWeight.w400,
-    color: AppColors.input,
+    fontWeight: FontWeight.w600,
+    color: AppColors.background,
   );
   static final input = GoogleFonts.lexendDeca(
     fontSize: 20,
-    fontWeight: FontWeight.w600,
-    color: AppColors.background,
+    fontWeight: FontWeight.w400,
+    color: AppColors.input,
   );
   static final titleListTile = GoogleFonts.lexendDeca(
     fontSize: 17,
