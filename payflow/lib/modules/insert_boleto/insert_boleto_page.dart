@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:payflow/shared/widgets/input_text/input_text_widget.dart';
 
 class InsertBoletoPage extends StatelessWidget {
   const InsertBoletoPage({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class InsertBoletoPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          InputTextWidget(),
         ],
       ),
     );
