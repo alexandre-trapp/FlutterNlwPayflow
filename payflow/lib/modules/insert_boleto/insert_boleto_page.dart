@@ -19,38 +19,44 @@ class InsertBoletoPage extends StatelessWidget {
           color: AppColors.input,
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 83, vertical: 24),
-            child: Text(
-              "Preencha os dados do boleto",
-              style: TextStyles.titleBoldHeading,
-              textAlign: TextAlign.center,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 73),
+              child: Text(
+                "Preencha os dados do boleto",
+                style: TextStyles.titleBoldHeading,
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          InputTextWidget(
-            label: "Nome do boleto",
-            icon: Icons.description_outlined,
-            onChanged: (value) {},
-          ),
-          InputTextWidget(
-            label: "Vencimento",
-            icon: FontAwesomeIcons.timesCircle,
-            onChanged: (value) {},
-          ),
-          InputTextWidget(
-            label: "Valor",
-            icon: FontAwesomeIcons.wallet,
-            onChanged: (value) {},
-          ),
-          InputTextWidget(
-            label: "Código",
-            icon: FontAwesomeIcons.barcode,
-            onChanged: (value) {},
-          )
-        ],
+            SizedBox(
+              height: 24,
+            ),
+            InputTextWidget(
+              label: "Nome do boleto",
+              icon: Icons.description_outlined,
+              onChanged: (value) {},
+            ),
+            InputTextWidget(
+              label: "Vencimento",
+              icon: FontAwesomeIcons.timesCircle,
+              onChanged: (value) {},
+            ),
+            InputTextWidget(
+              label: "Valor",
+              icon: FontAwesomeIcons.wallet,
+              onChanged: (value) {},
+            ),
+            InputTextWidget(
+              label: "Código",
+              icon: FontAwesomeIcons.barcode,
+              onChanged: (value) {},
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: SetLabelButtons(
         enableSecondaryColor: true,
