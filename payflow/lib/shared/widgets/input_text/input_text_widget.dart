@@ -6,12 +6,18 @@ class InputTextWidget extends StatelessWidget {
   final String label;
   final IconData icon;
   final String? initialValue;
+  final String? Function(String?)? validator;
+  final TextEditingController? controller;
+  final void Function(String value) onChanged;
 
   const InputTextWidget({
     Key? key,
     required this.label,
     required this.icon,
     this.initialValue,
+    this.validator,
+    this.controller,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -21,7 +27,10 @@ class InputTextWidget extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
+            controller: controller,
+            onChanged: onChanged,
             initialValue: initialValue,
+            validator: validator,
             style: TextStyles.input,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.zero,
