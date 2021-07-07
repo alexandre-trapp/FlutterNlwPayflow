@@ -5,11 +5,13 @@ import 'package:payflow/shared/themes/app_text_styles.dart';
 class InputTextWidget extends StatelessWidget {
   final String label;
   final IconData icon;
+  final String? initialValue;
 
   const InputTextWidget({
     Key? key,
     required this.label,
     required this.icon,
+    this.initialValue,
   }) : super(key: key);
 
   @override
@@ -19,6 +21,7 @@ class InputTextWidget extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
+            initialValue: initialValue,
             style: TextStyles.input,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.zero,
