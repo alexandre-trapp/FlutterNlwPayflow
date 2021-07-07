@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/input_text/input_text_widget.dart';
+import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 class InsertBoletoPage extends StatelessWidget {
   const InsertBoletoPage({Key? key}) : super(key: key);
@@ -50,6 +51,12 @@ class InsertBoletoPage extends StatelessWidget {
             onChanged: (value) {},
           )
         ],
+      ),
+      bottomNavigationBar: SetLabelButtons(
+        primaryLabel: "Cancelar",
+        primaryOnPressed: () {},
+        secondaryLabel: "Cadastrar",
+        secondaryOnPressed: () {},
       ),
     );
   }
