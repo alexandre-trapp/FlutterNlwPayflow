@@ -14,10 +14,13 @@ class _BoletoListWidgetState extends State<BoletoListWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: controller.boletos
-          .map((e) => BoletoTileWidget(boletoModel: e))
-          .toList(),
+    return ValueListenableBuilder(
+      valueListenable: controller.boletosNotifier,
+      builder: (_, boletos, __) => Column(
+        children: controller.boletos
+            .map((e) => BoletoTileWidget(boletoModel: e))
+            .toList(),
+      ),
     );
   }
 }
