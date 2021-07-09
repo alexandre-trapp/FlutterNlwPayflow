@@ -1,8 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:payflow/shared/models/boleto_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BoletoListController {
-  List<BoletoModel> boletos = <BoletoModel>[];
+  final boletosNotifier = ValueNotifier<List<BoletoModel>>(<BoletoModel>[]);
+
+  List<BoletoModel> get boletos => boletosNotifier.value;
+  set boletos(List<BoletoModel> value) => boletosNotifier.value = value;
 
   BoletoListController() {
     getBoletos();
