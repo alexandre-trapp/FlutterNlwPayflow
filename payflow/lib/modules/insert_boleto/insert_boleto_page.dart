@@ -74,14 +74,18 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                       label: "Nome do boleto",
                       icon: Icons.description_outlined,
                       validator: controller.validateName,
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.onChange(name: value);
+                      },
                     ),
                     InputTextWidget(
                       controller: dueDateInputTextController,
                       label: "Vencimento",
                       icon: FontAwesomeIcons.timesCircle,
                       validator: controller.validateDueDate,
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.onChange(dueDate: value);
+                      },
                     ),
                     InputTextWidget(
                       controller: moneyInputTextController,
@@ -89,14 +93,19 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                       icon: FontAwesomeIcons.wallet,
                       validator: (_) => controller.validateMoneyValue(
                           moneyInputTextController.numberValue),
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.onChange(
+                            value: moneyInputTextController.numberValue);
+                      },
                     ),
                     InputTextWidget(
                       controller: barcodeInputTextController,
                       label: "Código",
                       icon: FontAwesomeIcons.barcode,
                       validator: controller.validateBarcode,
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        controller.onChange(barcode: value);
+                      },
                     ),
                   ],
                 ),
