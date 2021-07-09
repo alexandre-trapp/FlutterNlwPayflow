@@ -16,21 +16,18 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 140,
-          child: Stack(
-            children: [
-              Container(
-                color: AppColors.primary,
-                height: 40,
-                width: double.maxFinite,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: BoletoInfoWidget(size: 14),
-              ),
-            ],
-          ),
+        Stack(
+          children: [
+            Container(
+              color: AppColors.primary,
+              height: 40,
+              width: double.maxFinite,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: BoletoInfoWidget(size: 14),
+            ),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.only(top: 24),
