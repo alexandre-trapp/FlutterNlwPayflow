@@ -14,44 +14,45 @@ class MeusBoletosPage extends StatefulWidget {
 class _MeusBoletosPageState extends State<MeusBoletosPage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        children: [
-          Container(
-            height: 80,
-            child: Stack(
-              children: [
-                Container(
-                  color: AppColors.primary,
-                  height: 40,
-                ),
-                BoletoInfoWidget(size: 14),
-              ],
-            ),
+    return Column(
+      children: [
+        Container(
+          height: 140,
+          child: Stack(
+            children: [
+              Container(
+                color: AppColors.primary,
+                height: 40,
+                width: double.maxFinite,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: BoletoInfoWidget(size: 14),
+              ),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 24),
-            child: Row(
-              children: [
-                Text(
-                  "Meus boletos",
-                  style: TextStyles.titleBoldHeading,
-                ),
-              ],
-            ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 24),
+          child: Row(
+            children: [
+              Text(
+                "Meus boletos",
+                style: TextStyles.titleBoldHeading,
+              ),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 24),
-            child: Divider(
-              thickness: 1,
-              height: 1,
-              color: AppColors.stroke,
-            ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 24),
+          child: Divider(
+            thickness: 1,
+            height: 1,
+            color: AppColors.stroke,
           ),
-          BoletoListWidget(),
-        ],
-      ),
+        ),
+        BoletoListWidget(),
+      ],
     );
   }
 }
