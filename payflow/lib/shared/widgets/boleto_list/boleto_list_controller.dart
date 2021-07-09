@@ -4,6 +4,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 class BoletoListController {
   List<BoletoModel> boletos = <BoletoModel>[];
 
+  BoletoListController() {
+    getBoletos();
+  }
+
   Future<void> getBoletos() async {
     try {
       final instance = await SharedPreferences.getInstance();
