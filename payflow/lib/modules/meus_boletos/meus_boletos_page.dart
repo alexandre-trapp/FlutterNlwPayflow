@@ -13,29 +13,32 @@ class MeusBoletosPage extends StatefulWidget {
 class _MeusBoletosPageState extends State<MeusBoletosPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 24),
-          child: Row(
-            children: [
-              Text(
-                "Meus boletos",
-                style: TextStyles.titleBoldHeading,
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 24),
+            child: Row(
+              children: [
+                Text(
+                  "Meus boletos",
+                  style: TextStyles.titleBoldHeading,
+                ),
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24),
-          child: Divider(
-            thickness: 1,
-            height: 1,
-            color: AppColors.stroke,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24),
+            child: Divider(
+              thickness: 1,
+              height: 1,
+              color: AppColors.stroke,
+            ),
           ),
-        ),
-        BoletoListWidget(),
-      ],
+          BoletoListWidget(),
+        ],
+      ),
     );
   }
 }
