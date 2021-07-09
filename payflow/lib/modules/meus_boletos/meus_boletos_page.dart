@@ -30,7 +30,7 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 24),
+          padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
           child: Row(
             children: [
               Text(
@@ -41,14 +41,17 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24),
+          padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
           child: Divider(
             thickness: 1,
             height: 1,
             color: AppColors.stroke,
           ),
         ),
-        BoletoListWidget(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: BoletoListWidget(),
+        ),
       ],
     );
   }
