@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/shared/models/boleto_model.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
+import 'package:payflow/shared/widgets/boleto_tile/boleto_tile_widget.dart';
 
 import 'home_controller.dart';
 
@@ -14,8 +16,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
+    Container(
+      child: BoletoTileWidget(
+        boletoModel: BoletoModel(
+          name: "Trapp",
+          dueDate: "02/04/1993",
+          value: 100,
+          barcode: "teste",
+        ),
+      ),
+    ),
   ];
 
   @override

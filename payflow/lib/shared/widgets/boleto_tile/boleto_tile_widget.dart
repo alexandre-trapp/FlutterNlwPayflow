@@ -10,6 +10,7 @@ class BoletoTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.zero,
       title: Text(
         boletoModel.name!,
         style: TextStyles.titleListTile,
