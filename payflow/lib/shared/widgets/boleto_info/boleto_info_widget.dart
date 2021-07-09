@@ -14,37 +14,40 @@ class BoletoInfoWidget extends StatelessWidget {
         color: AppColors.secondary,
         borderRadius: BorderRadius.circular(5),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Image.asset(
-            AppImages.logomini,
-            color: AppColors.background,
-            width: 56,
-            height: 56,
-          ),
-          Container(
-            width: 1,
-            height: 32,
-            color: AppColors.background,
-          ),
-          Text.rich(
-            TextSpan(
-              text: "Você tem",
-              style: TextStyles.captionBackground,
-              children: [
-                TextSpan(
-                  text: "$size boletos\n",
-                  style: TextStyles.captionBoldBackground,
-                ),
-                TextSpan(
-                  text: "cadastrados para pagar",
-                  style: TextStyles.captionBackground,
-                ),
-              ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset(
+              AppImages.logomini,
+              color: AppColors.background,
+              width: 56,
+              height: 56,
             ),
-          ),
-        ],
+            Container(
+              width: 1,
+              height: 32,
+              color: AppColors.background,
+            ),
+            Text.rich(
+              TextSpan(
+                text: "Você tem",
+                style: TextStyles.captionBackground,
+                children: [
+                  TextSpan(
+                    text: "$size boletos\n",
+                    style: TextStyles.captionBoldBackground,
+                  ),
+                  TextSpan(
+                    text: "cadastrados para pagar",
+                    style: TextStyles.captionBackground,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
