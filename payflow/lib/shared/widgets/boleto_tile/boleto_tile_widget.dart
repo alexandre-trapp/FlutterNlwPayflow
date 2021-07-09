@@ -10,8 +10,14 @@ class BoletoTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(boletoModel.name!),
-      subtitle: Text("Vence em ${boletoModel.dueDate}"),
+      title: Text(
+        boletoModel.name!,
+        style: TextStyles.titleListTile,
+      ),
+      subtitle: Text(
+        "Vence em ${boletoModel.dueDate}",
+        style: TextStyles.captionBody,
+      ),
       trailing: Text.rich(
         TextSpan(
           text: "R\$ ",
