@@ -32,11 +32,11 @@ class InsertBoletoController {
     );
   }
 
-  void cadastrarBoleto() {
+  Future<void> cadastrarBoleto() async {
     final form = formKey.currentState;
 
     if (form!.validate()) {
-      print(model);
+      return salvarBoleto();
     }
   }
 
