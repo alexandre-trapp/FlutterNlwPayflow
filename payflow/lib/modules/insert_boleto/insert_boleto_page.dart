@@ -122,7 +122,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         },
         secondaryLabel: "Cadastrar",
         secondaryOnPressed: () {
-          controller.CadastrarBoleto();
+          controller.cadastrarBoleto();
         },
       ),
     );

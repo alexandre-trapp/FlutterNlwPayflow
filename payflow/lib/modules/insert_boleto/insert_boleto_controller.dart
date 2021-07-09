@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/models/boleto_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InsertBoletoController {
   final formKey = GlobalKey<FormState>();
@@ -31,9 +32,22 @@ class InsertBoletoController {
     );
   }
 
-  void CadastrarBoleto() {
+  void cadastrarBoleto() {
     final form = formKey.currentState;
 
-    if (form!.validate()) {}
+    if (form!.validate()) {
+      print(model);
+    }
+  }
+
+  Future<void> salvarBoleto() async {
+    try {
+      final instance = await SharedPreferences.getInstance();
+
+      final boletos = instance.getStringList("boletos") ?? <String>[];
+      boletos.add(model.toJson());
+
+      await instance.setStringList("boletos", boletos);
+    } catch (e) {}
   }
 }
