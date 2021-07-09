@@ -18,7 +18,18 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
-          BoletoInfoWidget(size: 14),
+          Container(
+            height: 80,
+            child: Stack(
+              children: [
+                Container(
+                  color: AppColors.primary,
+                  height: 40,
+                ),
+                BoletoInfoWidget(size: 14),
+              ],
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 24),
             child: Row(
