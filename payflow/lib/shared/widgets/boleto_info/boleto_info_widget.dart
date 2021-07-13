@@ -32,7 +32,7 @@ class BoletoInfoWidget extends StatelessWidget {
             ),
             Text.rich(
               TextSpan(
-                text: "Você tem",
+                text: "Você tem ",
                 style: TextStyles.captionBackground,
                 children: [
                   TextSpan(

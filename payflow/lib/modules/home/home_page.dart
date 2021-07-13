@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/extract/extract_page.dart';
 import 'package:payflow/modules/meus_boletos/meus_boletos_page.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
     MeusBoletosPage(),
-    Container(color: Colors.blue),
+    ExtractPage(),
   ];
 
   @override
@@ -67,7 +68,9 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: Icon(
                   Icons.home,
-                  color: AppColors.primary,
+                  color: homeController.currentPage == 0
+                      ? AppColors.primary
+                      : AppColors.body,
                 )),
             GestureDetector(
               onTap: () {
@@ -93,7 +96,9 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: Icon(
                   Icons.description_outlined,
-                  color: AppColors.body,
+                  color: homeController.currentPage == 1
+                      ? AppColors.primary
+                      : AppColors.body,
                 ))
           ],
         ),
