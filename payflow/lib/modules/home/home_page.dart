@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
-                    image: NetworkImage(widget.user.photoURL),
+                    image: NetworkImage(widget.user.photoURL!),
                   ),
                 ),
               ),
