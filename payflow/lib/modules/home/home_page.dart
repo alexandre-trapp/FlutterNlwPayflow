@@ -22,10 +22,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
-  final pages = [
-    MeusBoletosPage(key: UniqueKey()),
-    ExtractPage(key: UniqueKey()),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +62,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: pages[homeController.currentPage],
+      body: [
+        MeusBoletosPage(key: UniqueKey()),
+        ExtractPage(key: UniqueKey()),
+      ][homeController.currentPage],
       bottomNavigationBar: Container(
         height: 90,
         child: Row(
