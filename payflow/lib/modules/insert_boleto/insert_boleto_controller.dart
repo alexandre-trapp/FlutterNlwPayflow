@@ -36,7 +36,7 @@ class InsertBoletoController {
     final form = formKey.currentState;
 
     if (form!.validate()) {
-      return salvarBoleto();
+      return await salvarBoleto();
     }
   }
 
